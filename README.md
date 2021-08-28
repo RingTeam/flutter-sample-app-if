@@ -1,6 +1,6 @@
 # flutter_sample_app_if
 
-A new Flutter project.
+A new Flutter project.(if)
 
 ## Getting Started
 
