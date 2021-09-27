@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter_sample_app_if/SampleCarouselSlider.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,8 +29,12 @@ class MyApp extends StatelessWidget {
   }
 }
 
+
+
 class MyHomePage extends StatefulWidget {
+  
   MyHomePage({Key? key, required this.title}) : super(key: key);
+  
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -104,7 +110,13 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => SampleCarouselSlider(),
+              )
+            );
+          },
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
